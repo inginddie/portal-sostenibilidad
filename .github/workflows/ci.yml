@@ -41,7 +41,7 @@ jobs:
       # 5. Ejecutar pruebas especificando el archivo directamente
       - name: Run tests
         run: |
-          pytest tests/test_example.py --disable-warnings -v
+           pytest -vv --maxfail=1
 
       # 6. Linting (opcional para asegurar clean code)
       - name: Lint code
