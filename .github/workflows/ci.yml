@@ -36,7 +36,7 @@ jobs:
       # 4. Ejecutar pruebas
       - name: Run tests
         run: |
-          pytest  # Ejecuta los tests (puedes ajustar según el framework)
+          pytest tests/  # Especifica la carpeta de pruebas
 
       # 5. Linting (opcional para asegurar clean code)
       - name: Lint code
