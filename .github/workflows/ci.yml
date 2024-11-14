@@ -33,12 +33,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt  # Asegúrate de tener un archivo de requisitos
 
-      # 4. Ejecutar pruebas
+      # 4. Listar los archivos en la carpeta de pruebas
+      - name: List test files
+        run: |
+          ls -R tests/
+
+      # 5. Ejecutar pruebas especificando el archivo directamente
       - name: Run tests
         run: |
-          pytest  # Ejecuta los tests (puedes ajustar según el framework)
+           pytest -vv --maxfail=1
 
-      # 5. Linting (opcional para asegurar clean code)
+      # 6. Linting (opcional para asegurar clean code)
       - name: Lint code
         run: |
           pip install flake8
